@@ -1,0 +1,15 @@
+<h1> All the recipes </h1>
+
+<%= form_tag "/search", method: :post do |form| %>
+  <input name="query" value=""/>
+  <input name="query" value=""/>
+<% end %>
+
+
+<ul>
+    <% @recipes.each do |r|%>
+     <li>
+        <%= r.title%>
+     </li>
+    <%end %>
+</ul>

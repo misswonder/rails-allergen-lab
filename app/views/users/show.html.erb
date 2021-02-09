@@ -1,0 +1,21 @@
+<h1>
+<%= "#{@user.username}'s Profile" %>
+</h1>
+
+<ul>
+    <% @user.recipes.each do |r|%>
+     <li>
+        <%= r.title%>
+     </li>
+    <%end %>
+</ul>
+
+
+<%= button_to 'Delete User', @user, :confirm => 'Are you sure?',
+                                     :method => :delete %>
+
+<!-- <%= link_to 'Delete User', @user, :confirm => 'Are you sure?',
+                                     :method => :delete %> -->           
+
+<!-- <%= button_to 'Go to Users', '/users', :method => :get %> -->
+                                                                   
